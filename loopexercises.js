@@ -21,3 +21,14 @@ function min(numbers){
 return currentMin;
 }
 console.log(min([4, 5, 6]));
+
+function computeTheAverage(numbers){
+    let average = numbers[];
+    average.forEach(computeTheAverage(numbers){
+        average+=;
+    })
+    return average / numbers.length; 
+
+    
+}
+console.log(computeTheAverage([1, 2, 3]));
