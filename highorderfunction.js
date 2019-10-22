@@ -52,15 +52,26 @@
 //     landSlide("Dirt Road and Soggy Canyon");
 //     tornadoes("Windy Street and Barebones Road");
 
-    let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
-    let newMoves = turtleMoves.filter(function(list){ 
-        return list[0] >= 0 && list[1] >= 0;});
-    console.table(newMoves);
-    let totalMoves = newMoves.map(function(pair){
-        return pair[0] + pair[1];
-    });
-    console.log(totalMoves);
-    let eachMoves = totalMoves.forEach(function(step){
-         return 
-    });
-    console.log(eachMoves);
+    // let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+    // let newMoves = turtleMoves.filter(function(list){ 
+    //     return list[0] >= 0 && list[1] >= 0;});
+    // console.table(newMoves);
+    // let totalMoves = newMoves.map(function(pair){
+    //     return pair[0] + pair[1];
+    // });
+    // console.log(totalMoves);
+    // let eachMoves = totalMoves.forEach(function(step){
+    //      return 
+    // });
+    // console.log(eachMoves);
+
+   
+    const oldString = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+    let newArray = oldString.split(' ');
+    newArray.reduce(function(word){
+        if(word.length === 3){
+            return acummulator + ' ';
+        }else{
+            return accumulator + word[word.length -1].toUpperCase;
+        }
+    })
