@@ -1,3 +1,4 @@
+'use strict'
 function repeat(fn, n){
     for(i = 0; i < n; i++){
         fn();
@@ -34,3 +35,19 @@ const filteredNames = filter(myNames, function(name) {
 
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+
+
+function hazardWarningCreator(typeOfWarning){
+    let warningCounter = 0;
+    return function(location){
+        warningCounter++;
+        console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+        console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+    }
+    }
+    const rocksWarning = hazardWarningCreator('Rocks on the Road');
+    const landSlide = hazardWarningCreator("Landslide");
+    const tornadoes = hazardWarningCreator("Huge Tornadoes");
+    rocksWarning("Main Street and Grim Street");
+    landSlide("Dirt Road and Soggy Canyon");
+    tornadoes("Windy Street and Barebones Road");
