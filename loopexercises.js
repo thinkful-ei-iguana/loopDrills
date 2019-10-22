@@ -23,10 +23,10 @@ return currentMin;
 console.log(min([4, 5, 6]));
 
 function computeTheAverage(numbers){
-    let average = numbers[];
-    average.forEach(computeTheAverage(numbers){
+    let average = numbers[0];
+    numbers.forEach(function(average){
         average+=;
-    })
+    });
     return average / numbers.length; 
 
     
